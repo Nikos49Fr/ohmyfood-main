@@ -1,0 +1,40 @@
+/* Vars */
+$primary-color: #9356DC;
+$green-color: #99E2D0;
+$green-font: #008766;
+$blue-color: #89C8FA;
+$blue2-color: #003A68;
+
+$btn: linear-gradient(to top, $primary-color, #FF79DA);
+$box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.35);
+
+@mixin btn {
+    height: 50px;
+    padding: 16px;
+    color: white;
+    background: $btn;
+    border: none;
+    border-radius: 25px;
+    box-shadow: $box-shadow;
+}
+
+/* Initialisation */
+* {
+    margin: 0;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    object-fit: cover;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+}
+
+/* SCCS */
+.btn {
+    @include btn;
+    &:hover {
+        opacity: 0.85;
+    }
+}
