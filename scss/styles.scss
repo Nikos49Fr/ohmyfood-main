@@ -1,0 +1,6 @@
+@use 'index' as *;
+
+/* test 3 */
+.header__nav {
+    @include center-flex;
+}
