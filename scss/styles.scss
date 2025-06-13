@@ -1,6 +1,8 @@
 @use 'index' as *;
 
-/* test 3 */
-.header__nav {
-    @include center-flex;
+/* temporaire avant le travail sur version responsive */
+
+* {
+    max-width: 375px;
 }
+    
