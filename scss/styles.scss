@@ -78,7 +78,6 @@ html {
 .main-guide {
     background-color: white;
     padding: 48px 20px 44px 20px;
-    margin-bottom: 49px;
     &__title {
         margin-bottom: 26px;
     }
@@ -106,7 +105,7 @@ html {
             &__card {
                 display: flex;
                 align-items: center;
-                gap: 26px;
+                gap: 24px;
                 height: 72px;
                 margin-left: 12px;
                 padding: 34px;
@@ -119,7 +118,9 @@ html {
                     font-weight: 500;
                 }
                 i {
-                    color: #7E7E7E;                    
+                    color: #7E7E7E; 
+                    width: 20px;
+                    text-align: center;
                     &.purple {
                         color: $primary-color;
                     }
@@ -128,4 +129,47 @@ html {
         }
     }
 }
+
+/* -------- Restaurant list -------- */
+.main-restaurants {
+    margin-top: 34px;
+    margin-bottom: 46px;
+    padding: 20px;
+    &__title {
+        margin-bottom: 18px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+/* -------- Footer -------- */
+.footer {
+    background-color: #353535;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 25px 22px 25px;
+    &__logo {
+        font-family: $font-title;
+        font-weight: 400;
+        font-size: 1.125rem;
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        i {
+            width: 16px;
+            text-align: center;
+        }
+        .important-link {
+            font-weight: 500;
+        }
+    }
+}
+
 
