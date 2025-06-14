@@ -1,5 +1,6 @@
 @use '../variables' as var;
 
+/* Card */
 .card {
   background-color: white;
   border-radius: 15px;
@@ -76,7 +77,7 @@
 
     &:hover {
       font-weight: 900; // cœur plein (fa-solid)
-      background: linear-gradient(193.33deg, var.$primary-color -11.44%, var.$secondary-color 123.93%);
+      background: var.$heart-gradient;
       background-clip: text;
       color: transparent;
     }

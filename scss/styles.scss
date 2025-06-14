@@ -1,8 +1,131 @@
 @use 'index' as *;
 
-/* temporaire avant le travail sur version responsive */
-
+/* *************
+temporaire avant le travail sur version responsive
+************** */
 * {
     max-width: 375px;
 }
-    
+html {
+    background-color: #888;
+}
+/* ****** fin du code temporaire ******** */
+
+
+/* -------- Header -------- */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    height: 63px;
+    padding: 23px 0 10px 0;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+/* -------- Nav : City search bar -------- */
+.city-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #353535;
+    background-color: #EAEAEA;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    input {
+        font-family: $font-body;
+        font-size: 1em;
+        font-weight: 500;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+        &:focus {
+            //border: none;
+            outline: 1px solid #353535;
+            outline-offset: 1px;
+        }
+    }
+}
+
+/* -------- CTA -------- */
+.main-cta {
+    text-align: center;
+    margin-top: 39px;
+    margin-bottom: 57px;
+    &__title {
+        font-weight: 700;
+    }
+    &__subtitle {
+        font-weight: 300;
+        font-size: 1.125rem;
+        margin-top: 10px;
+    }
+    &__btn {
+        margin-top: 29px;
+    }
+}
+
+/* -------- Guide -------- */
+.main-guide {
+    background-color: white;
+    padding: 48px 20px 44px 20px;
+    margin-bottom: 49px;
+    &__title {
+        margin-bottom: 26px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        .guide-step {
+            margin-bottom: 25px;
+            position: relative;
+            
+            &__number {
+                color: white;
+                background-color: #9356DE;
+                position: absolute;
+                top: 24px;
+                width: 24px;
+                height: 24px;
+                padding-top: 4px;
+                border-radius: 12px;
+                text-align: center;
+                font-size: 0.875em;
+                font-weight: 500;
+            }
+            &__card {
+                display: flex;
+                align-items: center;
+                gap: 26px;
+                height: 72px;
+                margin-left: 12px;
+                padding: 34px;
+                background-color: $bg-color;
+                border-radius: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+                i {
+                    color: #7E7E7E;                    
+                    &.purple {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+

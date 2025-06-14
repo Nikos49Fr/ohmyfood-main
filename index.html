@@ -14,22 +14,23 @@
 </head>
 <body>
     <div class="main">
-        
-    <!-- ********** Header ********** -->
-        <header class="header">
-            <div class="header__nav">
-                <i class="fa-solid fa-arrow-left"></i>
-                <img src="/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">                
-            </div>
-        </header>
 
-    <!-- ********** Nav : City search bar ********** -->
-        <nav class="nav">
-            <form class="nav__city-search">
-                <label for="city-search"><i class="fa-solid fa-location-dot"></i></label>
-                <input type="text" value="Paris, Belleville" name="city-search" id="city-search">
-            </form>
-        </nav>
+    <!-- ********** Header ********** -->
+        <header>
+            <nav class="main-nav">
+                <i class="fa-solid fa-lg fa-arrow-left main-nav__arrow main-nav__arrow--hidden"></i>
+                <img src="/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">                
+            </nav>
+        <!-- ********** Nav : City search bar ********** -->
+            <nav class="city-nav">
+                <form class="city-nav__search">
+                    <label for="city-search">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </label>
+                    <input type="text" value="Paris, Belleville" size="15" name="city-search" id="city-search">
+                </form>
+            </nav>
+        </header>
 
 <!-- choix d'un DIV plutôt que SECTION car pas une section autonome, et pas de titre-->
         <div class="main-content">
@@ -38,31 +39,31 @@
             <article class="main-cta">
                 <h1 class="main-cta__title">Réservez le menu qui vous convient</h1>
                 <h4 class="main-cta__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</h4>
-                <button class="btn">Explorer nos restaurants</button>
+                <button class="main-cta__btn btn">Explorer nos restaurants</button>
             </article>
 
         <!-- ********** Guide ********** -->
             <article class="main-guide">
                 <h2 class="main-guide__title">Fonctionnement</h2>
                 <div class="main-guide__list">
-                    <div class="main-guide__item">
-                        <div class="main-guide__step-number">1</div>
-                        <div class="card">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
+                    <div class="guide-step">
+                        <div class="guide-step__number">1</div>
+                        <div class="guide-step__card">
+                            <i class="fa-solid fa-lg fa-mobile-screen-button"></i>
                             <h3>Choisissez un restaurant</h3>
                         </div>
                     </div>
-                    <div class="main-guide__item">
-                        <div class="main-guide__step-number">2</div>
-                        <div class="card">
-                            <i class="fa-solid fa-list"></i>
+                    <div class="guide-step">
+                        <div class="guide-step__number">2</div>
+                        <div class="guide-step__card">
+                            <i class="fa-solid fa-list-ul"></i>
                             <h3>Composez votre menu</h3>
                         </div>
                     </div>
-                    <div class="main-guide__item">
-                        <div class="main-guide__step-number">3</div>
-                        <div class="card">
-                            <i class="fa-solid fa-store"></i>
+                    <div class="guide-step">
+                        <div class="guide-step__number">3</div>
+                        <div class="guide-step__card">
+                            <i class="fa-solid fa-store purple"></i>
                             <h3>Dégustez au restaurant</h3>
                         </div>
                     </div>

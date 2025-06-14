@@ -17,22 +17,27 @@ body {
   background-color: #F6F6F6;
 }
 
+/* Button */
 .btn {
   height: 50px;
-  padding: 16px;
+  padding: 16px 22px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  font-weight: 500;
   color: white;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background: linear-gradient(-3.64deg, #9356DC -25.95%, #FF79DA 140.72%);
+  cursor: pointer;
   border: none;
   border-radius: 25px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 }
 .btn:hover {
   opacity: 0.85;
+  background: linear-gradient(-5.78deg, #9356DC -26.04%, #FF79DA 132.01%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
+/* Card */
 .card {
   background-color: white;
   border-radius: 15px;
@@ -101,12 +106,131 @@ body {
 }
 .card__like-icon:hover {
   font-weight: 900;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(192.74deg, #9356DC -26.05%, #FF79DA 133.49%);
   background-clip: text;
   color: transparent;
 }
 
-/* temporaire avant le travail sur version responsive */
+/* *************
+temporaire avant le travail sur version responsive
+************** */
 * {
   max-width: 375px;
+}
+
+html {
+  background-color: #888;
+}
+
+/* ****** fin du code temporaire ******** */
+/* -------- Header -------- */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  height: 63px;
+  padding: 23px 0 10px 0;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.main-nav__arrow {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+}
+.main-nav__arrow--hidden {
+  display: none;
+}
+
+/* -------- Nav : City search bar -------- */
+.city-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #353535;
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.city-nav input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  background-color: inherit;
+  border: none;
+}
+.city-nav input:focus {
+  outline: 1px solid #353535;
+  outline-offset: 1px;
+}
+
+/* -------- CTA -------- */
+.main-cta {
+  text-align: center;
+  margin-top: 39px;
+  margin-bottom: 57px;
+}
+.main-cta__title {
+  font-weight: 700;
+}
+.main-cta__subtitle {
+  font-weight: 300;
+  font-size: 1.125rem;
+  margin-top: 10px;
+}
+.main-cta__btn {
+  margin-top: 29px;
+}
+
+/* -------- Guide -------- */
+.main-guide {
+  background-color: white;
+  padding: 48px 20px 44px 20px;
+  margin-bottom: 49px;
+}
+.main-guide__title {
+  margin-bottom: 26px;
+}
+.main-guide__list {
+  display: flex;
+  flex-direction: column;
+}
+.main-guide__list .guide-step {
+  margin-bottom: 25px;
+  position: relative;
+}
+.main-guide__list .guide-step__number {
+  color: white;
+  background-color: #9356DE;
+  position: absolute;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+.main-guide__list .guide-step__card {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  height: 72px;
+  margin-left: 12px;
+  padding: 34px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.main-guide__list .guide-step__card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main-guide__list .guide-step__card i {
+  color: #7E7E7E;
+}
+.main-guide__list .guide-step__card i.purple {
+  color: #9356DC;
 }/*# sourceMappingURL=styles.css.map */

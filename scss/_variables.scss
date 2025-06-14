@@ -9,5 +9,6 @@ $blue2-color: #003A68;
 $font-title: 'Shrikhand', serif;
 $font-body: 'Roboto', sans-serif;
 
-$btn-gradient: linear-gradient(to top, $primary-color, $secondary-color);
-$heart-gradient : linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+$btn-gradient--off : linear-gradient(-3.64deg, $primary-color -25.95%, $secondary-color 140.72%);
+$btn-gradient--on : linear-gradient(-5.78deg, $primary-color -26.04%, $secondary-color 132.01%);
+$heart-gradient : linear-gradient(192.74deg, $primary-color -26.05%, $secondary-color 133.49%);
