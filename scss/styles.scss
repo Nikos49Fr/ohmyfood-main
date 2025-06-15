@@ -1,20 +1,5 @@
 @use 'index' as *;
 
-/* *************
-temporaire avant le travail sur version responsive
-************** */
-
-html {
-    background-color: #888;
-}
-/* ****** fin du code temporaire ******** */
-
-
-body {
-    max-width: 1440px;
-    min-width: 320px;
-    width: 100%;
-}
 
 /* -------- Header -------- */
 .main-nav {
@@ -25,6 +10,7 @@ body {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     &__arrow {
+        color: #353535;
         position: absolute;
         top: 50%;
         left: 24px;
@@ -71,9 +57,11 @@ body {
 
 /* -------- CTA -------- */
 .main-cta {
+    background-color: $bg-color;
     text-align: center;
     margin-top: 39px;
     margin-bottom: 57px;
+    padding: 0 20px;
     &__title {
         font-weight: 700;
     }
@@ -145,6 +133,7 @@ body {
 
 /* -------- Restaurant list -------- */
 .main-restaurants {
+    background-color: $bg-color;
     margin-top: 34px;
     margin-bottom: 46px;
     padding: 20px;

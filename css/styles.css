@@ -14,7 +14,11 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
+  max-width: 1440px;
+  min-width: 320px;
+  width: 100%;
   background-color: #F6F6F6;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25), -4px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Button */
@@ -116,20 +120,6 @@ body {
   color: transparent;
 }
 
-/* *************
-temporaire avant le travail sur version responsive
-************** */
-html {
-  background-color: #888;
-}
-
-/* ****** fin du code temporaire ******** */
-body {
-  max-width: 1440px;
-  min-width: 320px;
-  width: 100%;
-}
-
 /* -------- Header -------- */
 .main-nav {
   display: flex;
@@ -140,6 +130,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .main-nav__arrow {
+  color: #353535;
   position: absolute;
   top: 50%;
   left: 24px;
@@ -181,9 +172,11 @@ body {
 
 /* -------- CTA -------- */
 .main-cta {
+  background-color: #F6F6F6;
   text-align: center;
   margin-top: 39px;
   margin-bottom: 57px;
+  padding: 0 20px;
 }
 .main-cta__title {
   font-weight: 700;
@@ -252,6 +245,7 @@ body {
 
 /* -------- Restaurant list -------- */
 .main-restaurants {
+  background-color: #F6F6F6;
   margin-top: 34px;
   margin-bottom: 46px;
   padding: 20px;
