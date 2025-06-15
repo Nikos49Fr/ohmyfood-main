@@ -187,8 +187,67 @@ body {
 
 
 /* -------- Responsive TABLETTE -------- */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
     
+    .main-cta {
+        margin: 39px 0;
+        &__title {
+            font-size: 2rem;
+        }
+    }
+
+    /* -------- Guide -------- */
+    .main-guide {
+        padding: 50px 2vw;
+        &__title {
+            margin-bottom: 26px;
+            text-align: center;
+        }
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 24px;;
+            .guide-step {
+                margin: 0;
+            }
+        }
+    }
+
+    /* -------- Restaurant list -------- */
+    .main-restaurants {
+        justify-self: center;
+        margin: 0;
+        padding: 30px 5vw;
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px 50px;
+            justify-content: center;
+        }
+        &__card {
+            width: calc((100% - 50px) / 2);
+        }
+    }
+
+    /* -------- Footer -------- */
+    .footer {
+        flex-direction: row;
+        max-height: 114px;
+        padding: 30px 25px;
+        gap: 50px;
+        &-links {
+            flex-wrap: wrap;
+            gap: 7px 30px;
+            &__link {
+                display: flex;
+                min-width: 130px;
+                &--with-icon {
+                    min-width: 190px;
+                }
+            }
+        }
+    }
 }
 
 

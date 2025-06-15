@@ -293,6 +293,64 @@ body {
 }
 
 /* -------- Responsive TABLETTE -------- */
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .main-cta {
+    margin: 39px 0;
+  }
+  .main-cta__title {
+    font-size: 2rem;
+  }
+  /* -------- Guide -------- */
+  .main-guide {
+    padding: 50px 2vw;
+  }
+  .main-guide__title {
+    margin-bottom: 26px;
+    text-align: center;
+  }
+  .main-guide__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px;
+  }
+  .main-guide__list .guide-step {
+    margin: 0;
+  }
+  /* -------- Restaurant list -------- */
+  .main-restaurants {
+    justify-self: center;
+    margin: 0;
+    padding: 30px 5vw;
+  }
+  .main-restaurants__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+    justify-content: center;
+  }
+  .main-restaurants__card {
+    width: calc((100% - 50px) / 2);
+  }
+  /* -------- Footer -------- */
+  .footer {
+    flex-direction: row;
+    max-height: 114px;
+    padding: 30px 25px;
+    gap: 50px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 7px 30px;
+  }
+  .footer-links__link {
+    display: flex;
+    min-width: 130px;
+  }
+  .footer-links__link--with-icon {
+    min-width: 190px;
+  }
+}
 /* -------- Responsive DESKTOP -------- */
 @media screen and (min-width: 1024px) {
   /* -------- Header -------- */
