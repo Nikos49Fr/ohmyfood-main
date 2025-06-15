@@ -19,7 +19,8 @@
         <header>
             <nav class="main-nav">
                 <i class="fa-solid fa-lg fa-arrow-left main-nav__arrow main-nav__arrow--hidden"></i>
-                <img src="/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">                
+                <img src="/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" class="main-nav__logo--img">
+                <h1 class="main-nav__logo--text">ohmyfood</h1>
             </nav>
         <!-- ********** Nav : City search bar ********** -->
             <nav class="city-nav">
@@ -32,12 +33,12 @@
             </nav>
         </header>
 
-<!-- choix d'un DIV plutôt que SECTION car pas une section autonome, et pas de titre-->
+<!-- choix d'un DIV plutôt que SECTION car pas une section autonome, et absence de titre pour une section -->
         <div class="main-content">
 
         <!-- ********** CTA ********** -->
             <article class="main-cta">
-                <h1 class="main-cta__title">Réservez le menu qui vous convient</h1>
+                <h2 class="main-cta__title">Réservez le menu qui vous convient</h2>
                 <h4 class="main-cta__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</h4>
                 <button class="main-cta__btn btn">Explorer nos restaurants</button>
             </article>
@@ -158,24 +159,24 @@
     <!-- ********** Footer ********** --> 
         <footer class="footer">
             <h2 class="footer__logo">ohmyfood</h2>
-            <ul class="footer__links">
-                <li>
+            <ul class="footer-links">
+                <li class="footer-links__link--with-icon">
                     <a href="#">
                         <i class="fa-solid fa-xs fa-utensils"></i>
                         <span class="important-link">Proposer un restaurant</span>
                     </a>
                 </li>
-                <li>
+                <li class="footer-links__link--with-icon">
                     <a href="#">
                         <i class="fa-solid fa-xs fa-handshake-angle"></i>
                         <span class="important-link">Devenir partenaire</span>
                     </a>
                 </li>
-                <li>
+                <li class="footer-links__link">
                     <a href="#">Mentions légales</a>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li class="footer-links__link">
+                    <a href="mailto:contact@ohmyfood.com">Contact</a>
                 </li>
             </ul>
         </footer>

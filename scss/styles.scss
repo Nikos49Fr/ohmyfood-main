@@ -3,21 +3,24 @@
 /* *************
 temporaire avant le travail sur version responsive
 ************** */
-* {
-    max-width: 375px;
-}
+
 html {
     background-color: #888;
 }
 /* ****** fin du code temporaire ******** */
 
 
+body {
+    max-width: 1440px;
+    min-width: 320px;
+    width: 100%;
+}
+
 /* -------- Header -------- */
 .main-nav {
     display: flex;
     justify-content: center;
-    height: 63px;
-    padding: 23px 0 10px 0;
+    padding: 12px 0 7px 0;
     position: relative;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -26,6 +29,16 @@ html {
         top: 50%;
         left: 24px;
         &--hidden {
+            display: none;
+        }
+    }
+    &__logo {
+        &--text {
+            font-family: $font-title;
+            font-weight: 400;
+            font-size: 1.875rem;
+        }
+        &--img {
             display: none;
         }
     }
@@ -91,7 +104,7 @@ html {
             
             &__number {
                 color: white;
-                background-color: #9356DE;
+                background-color: $primary-color;
                 position: absolute;
                 top: 24px;
                 width: 24px;
@@ -158,7 +171,7 @@ html {
         font-weight: 400;
         font-size: 1.125rem;
     }
-    &__links {
+    &-links {
         display: flex;
         flex-direction: column;
         gap: 7px;
@@ -173,3 +186,97 @@ html {
 }
 
 
+/* -------- Responsive TABLETTE -------- */
+@media screen and (min-width: 768px) {
+    
+}
+
+
+/* -------- Responsive DESKTOP -------- */
+@media screen and (min-width: 1024px) {
+
+    /* -------- Header -------- */
+    .main-nav {
+        padding: 31px 0;
+        &__logo {
+            &--text {
+                display: none;
+            }
+            &--img {
+                display: block;
+            }
+        }
+    }
+
+    /* -------- CTA -------- */
+    .main-cta {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__subtitle {
+            margin-top: 18px;
+        }
+        &__btn {
+            margin-top: 18px;
+        }
+    }
+
+    /* -------- Guide -------- */
+    .main-guide {
+        padding: 50px 12.5vw;
+        &__title {
+            margin-bottom: 26px;
+        }
+        &__list {
+            flex-direction: row;
+            gap: 24px;;
+            .guide-step {
+                margin: 0;
+                width: 100%;
+                &__card {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+
+    /* -------- Restaurant list -------- */
+    .main-restaurants {
+        justify-self: center;
+        margin: 0;
+        padding: 30px 12.5vw;
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px 100px;
+            justify-content: center;
+        }
+        &__card {
+            width: calc((100% - 100px) / 2);
+        }
+    }
+
+    /* -------- Footer -------- */
+    .footer {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        min-height: 114px;
+        padding: 30px 25px;
+        &__logo {
+            padding-right: 42px;
+        }
+        &-links {
+            flex-direction: row;
+            &__link {
+                display: flex;
+                min-width: 130px;
+                &--with-icon {
+                    min-width: 190px;
+                }
+            }
+        }
+    }
+
+}

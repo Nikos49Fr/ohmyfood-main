@@ -27,10 +27,10 @@
       object-fit: cover;
     }
     &--landscape {
-      object-position: center -57px;
+      object-position: center 70%;
     }
     &--portrait {
-      object-position: center -148px;
+      object-position: center 56%;
     }
     .card__badge {
       position: absolute;
