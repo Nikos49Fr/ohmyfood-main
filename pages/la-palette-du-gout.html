@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Oh my food</title>
+</head>
+<body>
+    <div class="main">
+
+    <!-- ********** Header ********** -->
+        <header>
+            <nav class="main-nav">
+                <a href="../index.html">
+                    <i class="fa-solid fa-lg fa-arrow-left main-nav__arrow"></i>
+                </a>
+                <img src="../images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" class="main-nav__logo--img">
+                <h1 class="main-nav__logo--text">ohmyfood</h1>
+            </nav>
+        </header>
+    
+    <!-- ********** Menu ********** -->
+        <div class="main">
+            <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="Plat présenté dans son assiette"
+                class="card__image--landscape"> <!-- Revoir class -->
+        
+            <article class="menu">
+                <header class="menu__header">
+                    <h1 class="menu__title">La palette du goût</h1>
+                    <div class="card__like-icon">
+                        <i class="fa-regular fa-heart card__like-icon--empty"></i>
+                        <i class="fa-solid fa-heart card__like-icon--filled"></i>
+                    </div>
+                </header>
+
+                <section class="menu__section">
+                    <h2 class="menu__subtitle">Entrées</h2>
+                    <div class="menu__bar"></div>
+
+                    <div class="dish">
+                        <div class="dish__text">
+                            <h3 class="dish__title">Fricassée d'escargots</h3>
+                            <p class="dish__description">Au piment d'Espelette</p>
+                        </div>
+                        <p class="dish__price">25€</p>
+                        <div class="dish__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+
+                    <div class="dish">
+                        <div class="dish__text">
+                            <h3 class="dish__title">Foie gras de canard mi-cuit</h3>
+                            <p class="dish__description">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <p class="dish__price">35€</p>
+                        <div class="dish__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+
+                    <div class="dish">
+                        <div class="dish__text">
+                            <h3 class="dish__title">Œuf au plat</h3>
+                            <p class="dish__description">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <p class="dish__price">20€</p>
+                        <div class="dish__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+
+        <!-- ********** Boutton "Commander" ********** --> 
+            <div>
+                <button class="menu__btn btn">Commander</button>
+            </div>
+
+        </div>
+
+    <!-- ********** Footer ********** --> 
+        <footer class="footer">
+            <h2 class="footer__logo">ohmyfood</h2>
+            <ul class="footer-links">
+                <li class="footer-links__link--with-icon">
+                    <a href="#">
+                        <i class="fa-solid fa-xs fa-utensils"></i>
+                        <span class="important-link">Proposer un restaurant</span>
+                    </a>
+                </li>
+                <li class="footer-links__link--with-icon">
+                    <a href="#">
+                        <i class="fa-solid fa-xs fa-handshake-angle"></i>
+                        <span class="important-link">Devenir partenaire</span>
+                    </a>
+                </li>
+                <li class="footer-links__link">
+                    <a href="#">Mentions légales</a>
+                </li>
+                <li class="footer-links__link">
+                    <a href="mailto:contact@ohmyfood.com">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

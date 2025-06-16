@@ -164,6 +164,7 @@ body {
   opacity: 1;
 }
 
+/* -------- SCSS de la page d'accueil -------- */
 /* -------- Header -------- */
 .main-nav {
   display: flex;
@@ -468,4 +469,5 @@ body {
   .footer-links__link--with-icon {
     min-width: 190px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+/* -------- SCSS des pages menu -------- *//*# sourceMappingURL=styles.css.map */
