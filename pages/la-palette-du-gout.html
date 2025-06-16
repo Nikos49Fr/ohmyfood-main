@@ -10,7 +10,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Oh my food</title>
+    <title>Ohmyfood</title>
 </head>
 <body>
     <div class="main">
@@ -26,65 +26,75 @@
             </nav>
         </header>
     
-    <!-- ********** Menu ********** -->
+    <!-- ********** Menu ********** -->   
         <div class="main">
-            <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt="Plat présenté dans son assiette"
-                class="card__image--landscape"> <!-- Revoir class -->
-        
-            <article class="menu">
+            
+            <div class="main__img">
+                <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="Plat présenté dans son assiette">
+            </div>
+
+            <section class="menu">
                 <header class="menu__header">
-                    <h1 class="menu__title">La palette du goût</h1>
+                    <h1 class="menu__header-title">La palette du goût</h1>
                     <div class="card__like-icon">
                         <i class="fa-regular fa-heart card__like-icon--empty"></i>
                         <i class="fa-solid fa-heart card__like-icon--filled"></i>
                     </div>
                 </header>
 
-                <section class="menu__section">
-                    <h2 class="menu__subtitle">Entrées</h2>
-                    <div class="menu__bar"></div>
-
-                    <div class="dish">
-                        <div class="dish__text">
-                            <h3 class="dish__title">Fricassée d'escargots</h3>
-                            <p class="dish__description">Au piment d'Espelette</p>
-                        </div>
-                        <p class="dish__price">25€</p>
-                        <div class="dish__check">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                <section class="dish">
+                    <div>
+                        <h2 class="dish__title">Entrées</h2>
+                        <div class="dish__bar"></div>
                     </div>
 
-                    <div class="dish">
-                        <div class="dish__text">
-                            <h3 class="dish__title">Foie gras de canard mi-cuit</h3>
-                            <p class="dish__description">Et ses copeaux de truffe noire</p>
+                    <article class="dish__content">
+                        <div class="dish__txt">
+                            <h3 class="dish__txt-subtitle">Fricassée d'escargots</h3>
+                            <p class="dish__txt-description">Au piment d'Espelette</p>
                         </div>
-                        <p class="dish__price">35€</p>
-                        <div class="dish__check">
-                            <i class="fa-solid fa-circle-check"></i>
+                        <div class="dish__tag">
+                            <p class="dish__tag-price">25€</p>
+                            <div class="dish__tag-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="dish">
-                        <div class="dish__text">
-                            <h3 class="dish__title">Œuf au plat</h3>
-                            <p class="dish__description">Assaisonné à la truffe sur lit de caviar</p>
+                    <article class="dish__content">
+                        <div class="dish__txt">
+                            <h3 class="dish__txt-subtitle">Foie gras de canard mi-cuit</h3>
+                            <p class="dish__txt-description">Et ses copeaux de truffe noire</p>
                         </div>
-                        <p class="dish__price">20€</p>
-                        <div class="dish__check">
-                            <i class="fa-solid fa-circle-check"></i>
+                        <div class="dish__tag">
+                            <p class="dish__tag-price">35€</p>
+                            <div class="dish__tag-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="dish__content">
+                        <div class="dish__txt">
+                            <h3 class="dish__txt-subtitle">Œuf au plat</h3>
+                            <p class="dish__txt-description">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="dish__tag">
+                            <p class="dish__tag-price">20€</p>
+                            <div class="dish__tag-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </article>
                 </section>
 
-            </article>
+            <!-- ********** Boutton "Commander" ********** -->
+                <div class="menu__btn">
+                    <button class="btn">Commander</button>
+                </div>
 
-        <!-- ********** Boutton "Commander" ********** --> 
-            <div>
-                <button class="menu__btn btn">Commander</button>
-            </div>
+            </section>
 
         </div>
 
