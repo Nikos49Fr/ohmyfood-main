@@ -9,11 +9,6 @@
 
 body {
   margin: auto;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
   max-width: 1440px;
   min-width: 320px;
   width: 100%;
@@ -21,8 +16,14 @@ body {
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25), -4px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
 /* Button */
 .btn {
+  position: relative;
   height: 50px;
   padding: 16px 22px;
   font-family: "Roboto", sans-serif;
@@ -33,12 +34,32 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 25px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  transition-property: opacity, background;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background: transparent;
+  pointer-events: none;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 300ms ease-out;
 }
 .btn:hover {
   opacity: 0.85;
   background: linear-gradient(-5.78deg, #9356DC -26.04%, #FF79DA 132.01%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.btn:hover::after {
+  opacity: 1;
 }
 
 /* Card */
@@ -107,7 +128,6 @@ body {
   font-weight: 300;
 }
 .card__like-icon {
-  font-family: "Font Awesome 6 Free";
   font-weight: 400;
   font-size: 1.375rem;
   color: #101010;
