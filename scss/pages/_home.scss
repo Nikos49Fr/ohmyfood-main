@@ -1,7 +1,7 @@
-
 /* -------- SCSS de la page d'accueil -------- */
 
 @use '../variables' as var;
+@use '../utilities' as utils;
 
 body {
     background-color: var.$bg-color;

@@ -6,3 +6,233 @@
 body {
     background-color: white;
 }
+
+// animation "ouverture carte"
+@keyframes cardRotateIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate3d(1, 1, 0, -90deg) scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate3d(1, 1, 0, 0) scale(1);
+    }
+}
+
+.dish {
+    perspective: 1024px;
+
+    &__content {
+        opacity: 0; // état initial
+        animation: cardRotateIn 0.8s ease-in-out forwards;
+        transform-origin: bottom left;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        will-change: opacity, transform; // optimisation pour le rendu
+    }
+    // Boucles imbriquées pour chaque section et chaque card
+    @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) {
+            .dish__content {
+                @for $j from 1 through 3 {
+                    &:nth-of-type(#{$j}) {
+                        animation-delay: #{(($i - 1) * 3 + ($j - 1)) * 0.2 + 0.01}s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.main {
+    position: relative;
+    width: 100%;
+
+    &__img {
+        width: 100%;
+        max-height: 380px;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            object-position: center 60%;
+        }
+    }
+}
+
+.menu {
+    background-color: var.$bg-color;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin: -55px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 17px 0 17px;
+        &-title {
+            font-family: var.$font-title;
+            font-weight: 400;
+            font-size: 1.75rem;
+        }
+        .card__like-icon {
+            padding-right: 43px;
+        }
+    }
+
+    .dish {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &__title {
+            font-family: var.$font-body;
+            font-weight: 300;
+            font-size: 1.375rem;
+            font-variant-caps: all-small-caps;
+            padding-bottom: 5px;
+        }
+        &__bar {
+            width: 40px;
+            border-top: 3px solid var.$tertiary-color;
+        }
+
+        &__content {
+            box-sizing: border-box;
+            width: 349px;
+            height: 69px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 5px;
+            overflow: hidden;
+            cursor: pointer;
+
+        // animation
+            &:hover {
+                .dish__tag {
+                    &-check {
+                        width: 59px;
+                    }
+                }
+            }
+        }
+
+        &__txt {
+            display: flex;
+            flex: 1;
+            min-width: 0;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px;
+            padding: 15px 0 15px 15px;
+
+            &-subtitle {
+                font-weight: 500;
+                font-size: 1.125rem;
+                @include utils.ellipsis;
+            }
+            &-description {
+                font-weight: 300;
+                font-size: 0.940rem;
+                @include utils.ellipsis;
+            }
+        }
+        &__tag {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+
+            &-price {
+                font-weight: 700;
+                font-size: 0.940rem;
+                padding: 15px;
+                padding-left: 5px;
+                align-self: flex-end;
+            }
+            &-check {
+                color: white;
+                background-color: var.$tertiary-color;
+                font-size: 1.25rem;
+                height: 100%;
+                border-radius: 0 15px 15px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            // état initial animation
+                width: 0;
+                transition: width 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        .btn {
+            padding: 16px 59px;
+        }
+    }
+}
+
+
+
+/* -------- Responsive TABLETTE -------- */
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .menu {
+        margin: -40px auto 0 auto;
+        max-width: 86.6%;
+        
+        &__header {
+            justify-content: center;
+            gap: 24px;
+            padding-top: 51px;
+        }
+    }
+    
+    /* -------- Carte menu -------- */
+    .menu .dish__content {
+        width: 604px;
+    }
+}
+
+/* -------- Responsive DESKTOP -------- */
+@media screen and (min-width: 1024px) {
+
+    /* -------- Header -------- */
+    .main__img img {
+        height: 383px;
+    }
+    
+    .menu {
+        margin: -40px auto 0 auto;
+        max-width: 73.3%;
+        
+        &__header {
+            justify-content: center;
+            gap: 24px;
+            padding-top: 51px;
+        }
+    }
+
+    /* -------- Carte menu -------- */
+    .menu .dish__content {
+        width: 634px;
+    }
+}
