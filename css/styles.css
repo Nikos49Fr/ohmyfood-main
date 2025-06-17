@@ -12,8 +12,6 @@ body {
   max-width: 1440px;
   min-width: 320px;
   width: 100%;
-  background-color: #F6F6F6;
-  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25), -4px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -165,6 +163,10 @@ body {
 }
 
 /* -------- SCSS de la page d'accueil -------- */
+body {
+  background-color: #F6F6F6;
+}
+
 /* -------- Header -------- */
 .main-nav {
   display: flex;
@@ -201,6 +203,7 @@ body {
   color: #353535;
   background-color: #EAEAEA;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 4px;
 }
 .city-nav input {
   font-family: "Roboto", sans-serif;
@@ -219,9 +222,7 @@ body {
 .main-cta {
   background-color: #F6F6F6;
   text-align: center;
-  margin-top: 39px;
-  margin-bottom: 57px;
-  padding: 0 20px;
+  padding: 39px 20px 57px;
 }
 .main-cta__title {
   font-weight: 700;
@@ -334,7 +335,7 @@ body {
 /* -------- Responsive TABLETTE -------- */
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
   .main-cta {
-    margin: 39px 0;
+    padding: 35px 20px 40px;
   }
   .main-cta__title {
     font-size: 2rem;
@@ -402,10 +403,13 @@ body {
   .main-nav__logo--img {
     display: block;
   }
+  /* -------- Nav : City search bar -------- */
+  .city-nav {
+    margin-bottom: 0;
+  }
   /* -------- CTA -------- */
   .main-cta {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 30px 20px;
   }
   .main-cta__title {
     font-size: 2.5rem;
@@ -471,6 +475,10 @@ body {
   }
 }
 /* -------- SCSS des pages menu -------- */
+body {
+  background-color: white;
+}
+
 .main {
   position: relative;
   width: 100%;
