@@ -89,13 +89,12 @@
             transition: 
                 opacity ease-in .3s, 
                 transform 0.5s 0.3s cubic-bezier(0.5,2,0.5,-2); //battement de coeur
-            pointer-events: none;
+            //pointer-events: none;
         }
 
         &--empty {
             color: #101010;
             z-index: 1;
-            pointer-events: auto; // permet le hover
             cursor: pointer;
             opacity: 1;
         }
@@ -104,6 +103,7 @@
             background: var.$heart-gradient;
             background-clip: text;
             color: transparent;
+            cursor: pointer;
             opacity: 0;
             z-index: 2;
         }

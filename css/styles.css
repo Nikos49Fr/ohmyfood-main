@@ -137,12 +137,10 @@ body {
   font-size: 1.375rem;
   transform: scale(1);
   transition: opacity ease-in 0.3s, transform 0.5s 0.3s cubic-bezier(0.5, 2, 0.5, -2);
-  pointer-events: none;
 }
 .card__like-icon--empty {
   color: #101010;
   z-index: 1;
-  pointer-events: auto;
   cursor: pointer;
   opacity: 1;
 }
@@ -150,6 +148,7 @@ body {
   background: linear-gradient(192.74deg, #9356DC -26.05%, #FF79DA 133.49%);
   background-clip: text;
   color: transparent;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
 }
@@ -489,7 +488,7 @@ body {
   }
   100% {
     opacity: 1;
-    transform: translateX(0) rotate3d(1, 1, 0, 0) scale(1);
+    transform: translateX(0) rotate3d(1, 1, 0, 0deg) scale(1);
   }
 }
 .dish {
@@ -512,23 +511,32 @@ body {
 .dish:nth-of-type(1) .dish__content:nth-of-type(3) {
   animation-delay: 0.41s;
 }
-.dish:nth-of-type(2) .dish__content:nth-of-type(1) {
+.dish:nth-of-type(1) .dish__content:nth-of-type(4) {
   animation-delay: 0.61s;
 }
-.dish:nth-of-type(2) .dish__content:nth-of-type(2) {
+.dish:nth-of-type(2) .dish__content:nth-of-type(1) {
   animation-delay: 0.81s;
 }
-.dish:nth-of-type(2) .dish__content:nth-of-type(3) {
+.dish:nth-of-type(2) .dish__content:nth-of-type(2) {
   animation-delay: 1.01s;
 }
-.dish:nth-of-type(3) .dish__content:nth-of-type(1) {
+.dish:nth-of-type(2) .dish__content:nth-of-type(3) {
   animation-delay: 1.21s;
 }
-.dish:nth-of-type(3) .dish__content:nth-of-type(2) {
+.dish:nth-of-type(2) .dish__content:nth-of-type(4) {
   animation-delay: 1.41s;
 }
-.dish:nth-of-type(3) .dish__content:nth-of-type(3) {
+.dish:nth-of-type(3) .dish__content:nth-of-type(1) {
   animation-delay: 1.61s;
+}
+.dish:nth-of-type(3) .dish__content:nth-of-type(2) {
+  animation-delay: 1.81s;
+}
+.dish:nth-of-type(3) .dish__content:nth-of-type(3) {
+  animation-delay: 2.01s;
+}
+.dish:nth-of-type(3) .dish__content:nth-of-type(4) {
+  animation-delay: 2.21s;
 }
 
 .main {
@@ -537,7 +545,7 @@ body {
 }
 .main__img {
   width: 100%;
-  max-height: 380px;
+  max-height: 275px;
   overflow: hidden;
   display: flex;
   position: relative;
