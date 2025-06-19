@@ -339,3 +339,216 @@ body {
         }
     }
 }
+
+
+/*
+========== Loader page d'accueil ==========
+ */
+
+.loader {
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // fond semi-transparent
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        // pour stopper l'animation globale
+        animation: fade-out-global 1s ease-in-out 3s forwards;
+    }
+    &-plate {
+        position: fixed;
+        width: 170px; //170px;
+        height: 120px; //120px;
+        z-index: 6;
+        background: #ffffff;
+        border: 6px solid #ccc;
+        border-radius: 50%;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .loader-food {
+            position: fixed;
+            width: 170px; //170px;
+            height: 120px; //120px;
+            z-index: 5;
+            animation: shake 0.4s ease-in-out 0.8s 2;
+            transform-origin: 50% 50%;
+            animation: rotateDish 2.5s linear forwards;
+        }
+    }
+    &-icon {
+        position: absolute;
+        font-size: 2rem;
+        animation: iconIn 0.8s ease-in-out forwards;
+    }
+
+}
+
+// variables de timing de l'animation
+$tr-ing-dur: 2000ms;
+$tr-ing-del: 900ms;
+$rot-ing-a: 720deg;
+$rot-ing-dur: 1500ms;
+$rot-ing-del: 200ms;
+
+@keyframes spin-ing { to { transform: rotate($rot-ing-a); } } // all ingredients spin
+@keyframes spin-shrimp { to { transform: rotate($rot-ing-a + 36deg); } }
+@keyframes spin-fish { to { transform: rotate($rot-ing-a - 36deg); } }
+@keyframes fadeout { 50% { opacity: 1; } to { opacity: 0; } } // some ingredients fadeout
+
+.food {
+    &-carrot {
+        @include utils.food-icon(-57px, 53px, 110, #ff8c42);
+        @keyframes move-carrot  { to { transform: translateX(10px) translateY(85px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards;
+        i{ animation: move-carrot $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-lemon {
+        @include utils.food-icon(-48px, 112px, 60, #f3d250);
+        @keyframes move-lemon  { to { transform: translateX(-55px) translateY(76px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards,
+            fadeout $tr-ing-dur ease-in-out $tr-ing-del forwards;
+        i{ animation: move-lemon $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-shrimp {
+        @include utils.food-icon(-7px, 158px, 100, var.$secondary-color);
+        @keyframes move-shrimp  { to { transform: translateX(-37px) translateY(62px); } }
+        animation: spin-shrimp $rot-ing-dur ease-in-out $rot-ing-del forwards;
+        transform-origin: center center;
+        i{ animation: move-shrimp $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-pepper {
+        @include utils.food-icon(63px, 162px, 50, #cc2c04);
+        @keyframes move-pepper  { to { transform: translateX(-109px) translateY(-35px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards,
+            fadeout $tr-ing-dur ease-in-out $tr-ing-del forwards;
+        i{ animation: move-pepper $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-leaf-1 {
+        @include utils.food-icon(104px, 108px, 80, var.$tertiary-color);
+        @keyframes move-leaf-1  { to { transform: translateX(-35px) translateY(-48px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards;
+        i{ animation: move-leaf-1 $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-egg {
+        @include utils.food-icon(113px, 61px, 40, #e2d9b2);
+        @keyframes move-egg  { to { transform: translateX(0px) translateY(-85px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards,
+            fadeout $tr-ing-dur ease-in-out $tr-ing-del forwards;
+        i{ animation: move-egg $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-leaf-2 {
+        @include utils.food-icon(104px, -22px, 70, var.$tertiary-color);
+        @keyframes move-leaf-2  { to { transform: translateX(56px) translateY(-48px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards;
+        i{ animation: move-leaf-2 $tr-ing-dur ease-in-out $tr-ing-del forwards;
+            transform: scaleX(-1); }
+    }
+    &-seeding {
+        @include utils.food-icon(63px, -76px, 30, #dbd6a6);
+        @keyframes move-seeding  { to { transform: translateX(129px) translateY(-35px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards,
+            fadeout $tr-ing-dur ease-in-out $tr-ing-del forwards;
+        i{ animation: move-seeding $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-fish {
+        @include utils.food-icon(-7px, -76px, 90, var.$blue-color);
+        @keyframes move-fish  { to { transform: translateX(47px) translateY(72px); } }
+        animation: spin-fish $rot-ing-dur ease-in-out $rot-ing-del forwards;
+        i{ animation: move-fish $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-bacon {
+        @include utils.food-icon(-48px, -26px, 20, #a73b5f);
+        @keyframes move-bacon  { to { transform: translateX(75px) translateY(76px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards,
+            fadeout $tr-ing-dur ease-in-out $tr-ing-del forwards;
+        i{ animation: move-bacon $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+    &-cookie {
+        @include utils.food-icon(28px, 53px, 10, #79511d);
+        @keyframes move-cookie  { to { transform: translateX(0px) translateY(0px); } }
+        animation: spin-ing $rot-ing-dur ease-in-out $rot-ing-del forwards,
+            fadeout $tr-ing-dur ease-in-out $tr-ing-del forwards;
+        i{ animation: move-cookie $tr-ing-dur ease-in-out $tr-ing-del forwards; }
+    }
+}
+
+// Fumée
+.smoke {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
+    filter: blur(2px);
+    &-1 {
+        top: -40px;
+        left: 25%;
+        animation: smokeRise 0.9s ease-in-out 0.4s infinite;
+    }
+    &-2 {
+        top: -30px;
+        left: 50%;
+        animation: smokeRise 0.6s ease-in-out infinite;
+    }
+    &-3 {
+        top: -40px;
+        left: 75%;
+        animation: smokeRise 1.1s ease-in-out 0.3s infinite;
+    }
+}
+
+@keyframes rotateDish {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes iconIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes smokeRise {
+    0% {
+        opacity: 0.7;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(1.5);
+    }
+}
+
+@keyframes fade-out-global {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1.5deg); }
+    50% { transform: rotate(-1.5deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+}

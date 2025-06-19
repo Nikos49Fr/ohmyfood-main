@@ -6,3 +6,9 @@
     overflow: hidden;
 }
 
+@mixin food-icon($top, $left, $z, $color) {
+    top: $top;
+    left: $left;
+    z-index: $z;
+    color: $color;
+}
